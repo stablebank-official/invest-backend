@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/stablebank-invest-backend/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/stablebank-invest-backend/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/stablebank-invest-backend",
+  "projects": {
+    "rwas": {
+      "type": "application",
+      "root": "apps/rwas",
+      "entryFile": "main",
+      "sourceRoot": "apps/rwas/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rwas/tsconfig.app.json"
+      }
+    },
+    "stablebank-invest-backend": {
+      "type": "application",
+      "root": "apps/stablebank-invest-backend",
+      "entryFile": "main",
+      "sourceRoot": "apps/stablebank-invest-backend/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/stablebank-invest-backend/tsconfig.app.json"
+      }
+    },
+    "stocks": {
+      "type": "application",
+      "root": "apps/stocks",
+      "entryFile": "main",
+      "sourceRoot": "apps/stocks/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/stocks/tsconfig.app.json"
+      }
+    },
+    "tokenized-bonds": {
+      "type": "application",
+      "root": "apps/tokenized-bonds",
+      "entryFile": "main",
+      "sourceRoot": "apps/tokenized-bonds/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/tokenized-bonds/tsconfig.app.json"
+      }
+    },
+    "tokenized-treasuries": {
+      "type": "application",
+      "root": "apps/tokenized-treasuries",
+      "entryFile": "main",
+      "sourceRoot": "apps/tokenized-treasuries/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/tokenized-treasuries/tsconfig.app.json"
+      }
+    },
+    "vaults": {
+      "type": "application",
+      "root": "apps/vaults",
+      "entryFile": "main",
+      "sourceRoot": "apps/vaults/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/vaults/tsconfig.app.json"
+      }
+    },
+    "yield-strategies": {
+      "type": "application",
+      "root": "apps/yield-strategies",
+      "entryFile": "main",
+      "sourceRoot": "apps/yield-strategies/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/yield-strategies/tsconfig.app.json"
+      }
+    }
+  }
+}
